@@ -12,13 +12,13 @@ We currently don't have a website (yet!).
 In the meantime, you can browse all documented functions in the [AutoComplete](AutoComplete/) folder.
 
 # Features
-- [Fastest in the land](BENCHMARK.md) (Outperforms Latite, Flarial, Onix, Selaura and Solstice in every category).
+- [Fastest in the land](BENCHMARK.md) (Outperforms Latite, Flarial, Onix, Selaura, and Solstice in every category).
 - Modern event system with cancellation and typed event parameters.
 - Object-oriented API that lets you manipulate objects directly with method binds, no need for wrapper functions!
 - Lightweight and optimized for performance.
 - Stack traced error messages and safe failover.
 - Handles edge cases. Null pointers, missing data, and invalid references won't cause crashes.
-- Over 200 documented functions and growing.
+- Over 700 documented functions and growing.
 - Extensive chainability.
 - Actively maintained.
 
