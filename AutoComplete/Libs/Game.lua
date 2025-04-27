@@ -94,3 +94,13 @@ function game.pressKey(key) end
 ---Simulates a mouse button press.  
 ---@param button integer  
 function game.pressMouse(button) end
+
+---Returns Minecrafts version as a String.  
+---@return String  
+---@nodiscard  
+function game.getVersion() end
+
+---Returns Minecrafts version as a String but formatted nicely (how it looks in the main menu).  
+---@return String  
+---@nodiscard  
+function game.getFormattedVersion() end

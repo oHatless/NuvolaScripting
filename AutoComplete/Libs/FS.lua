@@ -35,8 +35,8 @@ function Path:absolute() end
 ---@return Path  
 function Path:canonical() end
 
----Converts the Path to a string.  
----@return string  
+---Converts the Path to a String.  
+---@return String  
 ---@nodiscard  
 function Path:toString() end
 
@@ -93,37 +93,37 @@ function fs.lastWriteTime(path) end
 
 ---Returns the filename.  
 ---@param path String|string|Path  
----@return string  
+---@return String  
 ---@nodiscard  
 function fs.filename(path) end
 
 ---Returns the file stem.  
 ---@param path String|string|Path  
----@return string  
+---@return String  
 ---@nodiscard  
 function fs.stem(path) end
 
 ---Returns the file extension.  
 ---@param path String|string|Path  
----@return string  
+---@return String  
 ---@nodiscard  
 function fs.extension(path) end
 
 ---Returns the parent path (directory).  
 ---@param path String|string|Path  
----@return string  
+---@return String  
 ---@nodiscard  
 function fs.parentPath(path) end
 
 ---Returns the absolute path.  
 ---@param path String|string|Path  
----@return string  
+---@return String  
 ---@nodiscard  
 function fs.absolute(path) end
 
 ---Returns the canonical path (resolves symbolic links, etc.)  
 ---@param path String|string|Path  
----@return string  
+---@return String  
 ---@nodiscard  
 function fs.canonical(path) end
 
@@ -222,12 +222,35 @@ function fs.isWritable(path) end
 ---Safely joins two path parts into a single path.  
 ---@param a String|string|Path  
 ---@param b String|string|Path  
----@return string  
+---@return String  
 ---@nodiscard  
 function fs.join(a, b) end
 
 ---Splits a full path into directory and filename parts.  
 ---@param path String|string|Path  
----@return string dir, string file  
+---@return String dir, String file  
 ---@nodiscard  
 function fs.split(path) end
+
+---Opens a folder in File Explorer.  
+---@param folder String|string|Path  
+function fs.showFolder(folder) end
+
+---Opens a file in its default application.  
+---@param file String|string|Path  
+function fs.showFile(file) end
+
+---Returns the local state directory.  
+---@return Path  
+---@nodiscard  
+function fs.getLocalState() end
+
+---Returns the roaming state directory (where client data is usually stored).  
+---@return Path  
+---@nodiscard  
+function fs.getRoamingState() end
+
+---Returns the temporary state directory.  
+---@return Path  
+---@nodiscard  
+function fs.getTempState() end

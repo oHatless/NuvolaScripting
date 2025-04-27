@@ -23,3 +23,7 @@ function onEject() end
 
 ---Called every 10 milliseconds in the client thread.  
 function onUpdate() end
+
+---Called every frame in the render thread.  
+---@param dt number  
+function onRender(dt) end
