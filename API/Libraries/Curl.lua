@@ -33,7 +33,7 @@ eCurlOption = {
     CURLOPT_XOAUTH2_BEARER = 10
 }
 
----Create a new curl object.  
+---Creates a new curl object.  
 ---@return curl  
 ---@nodiscard  
 function curl.new() end
