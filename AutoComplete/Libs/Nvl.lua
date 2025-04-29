@@ -3,7 +3,6 @@
 ---@class nvl
 nvl = {}
 
-
 ---@enum eSystem
 eSystem = {
     ModuleManager = 0

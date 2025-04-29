@@ -3,6 +3,9 @@
 ---@class actor  
 actor = {}
 
+---@class Actor  
+local Actor = {}
+
 ---Returns a list of all actors in the world.  
 ---@return Actor[]
 function actor.getActors() end
@@ -10,9 +13,6 @@ function actor.getActors() end
 ---Runs a callback for every valid actor.  
 ---@param callback fun(a: Actor)
 function actor.forEach(callback) end
-
----@class Actor  
-local Actor = {}
 
 ---Returns the actor's position.  
 ---@return vec3?  

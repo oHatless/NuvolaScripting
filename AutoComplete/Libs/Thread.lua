@@ -1,7 +1,36 @@
 ---@meta
 
+---@class thread
+thread = {}
+
 ---@class Thread
 local Thread = {}
+
+---Creates a new thread object (not started yet).  
+---@param func fun()  
+---@return Thread  
+---@nodiscard  
+function thread.new(func) end
+
+---Immediately runs a function on a background thread.  
+---@param func fun()  
+function thread.run(func) end
+
+---Suspends the current thread for the given number of seconds.  
+---@param seconds number  
+function thread.sleep(seconds) end
+
+---Yields the current thread voluntarily.  
+function thread.yield() end
+
+---Returns the current thread object if inside a thread.  
+---@return Thread?  
+---@nodiscard  
+function thread.current() end
+
+---Blocks until all given threads are complete.  
+---@param threads Thread[]  
+function thread.waitForAll(threads) end
 
 ---Starts the thread execution.  
 function Thread:start() end
@@ -38,32 +67,3 @@ function Thread:getId() end
 ---Sets the name of the thread for debugging purposes.  
 ---@param name String|string  
 function Thread:setName(name) end
-
----@class thread
-thread = {}
-
----Creates a new thread object (not started yet).  
----@param func fun()  
----@return Thread  
----@nodiscard  
-function thread.new(func) end
-
----Immediately runs a function on a background thread.  
----@param func fun()  
-function thread.run(func) end
-
----Suspends the current thread for the given number of seconds.  
----@param seconds number  
-function thread.sleep(seconds) end
-
----Yields the current thread voluntarily.  
-function thread.yield() end
-
----Returns the current thread object if inside a thread.  
----@return Thread?  
----@nodiscard  
-function thread.current() end
-
----Blocks until all given threads are complete.  
----@param threads Thread[]  
-function thread.waitForAll(threads) end
