@@ -46,10 +46,10 @@ print(req:getResponse())
 
 Understanding how the API handles execution is essential to avoid deadlocks and random freezes.
 
-When a script is loaded by the API, it first calls `client.registerModule()` exactly once to retrieve metadata.
-After registration, all global scope code is executed immediately. Then, the script’s configuration is loaded, and lifecycle functions like `onEnable()` are called as needed.
-It’s important to note that global code is only executed once. If you want your script to run code continuously, you must explicitly use `script.loop()`.
-`script.loop()` runs your code repeatedly in a dedicated thread shared by all scripts, with an optional delay you specify.
+When a script is loaded by the API, it first calls `client.registerModule()` exactly once to retrieve metadata.  
+After registration, all global scope code is executed immediately. Then, the script’s configuration is loaded, and lifecycle functions like `onEnable()` are called as needed.  
+It’s important to note that global code is only executed once. If you want your script to run code continuously, you must explicitly use `script.loop()`.  
+`script.loop()` runs your code repeatedly in a dedicated thread shared by all scripts, with an optional delay you specify.  
 Do not call `timer.sleep()` inside `script.loop()`, as it will sleep the entire thread and block other scripts from looping.
 
 # AutoComplete

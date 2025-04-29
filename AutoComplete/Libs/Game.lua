@@ -3,11 +3,6 @@
 ---@class game
 game = {}
 
----Returns the local player (you).  
----@return Player?  
----@nodiscard  
-function game.getLocalPlayer() end
-
 ---Frees your mouse from Minecraft.  
 function game.freeMouse() end
 
