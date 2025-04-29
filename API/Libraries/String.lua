@@ -1,7 +1,7 @@
 ---@meta
 
----String is a wrapper around the standard Lua string, providing additional utility functions.  
----All Nuvola functions return a String instead of a regular string, but you can convert it using :toString().
+---String is an extended version of the standard Lua string, providing additional utility functions.  
+---All functions in the API return a String instead of a regular string, but you can convert it back with `:toString()`.  
 ---@class String
 String = {}
 
