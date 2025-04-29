@@ -4,8 +4,6 @@ Nuvola Scripting is a powerful API built on Lua 5.4.7.
 It’s designed to be intuitive, safe, and incredibly fast, enabling you to create anything you can think of with minimal effort.
 With support for custom modules, commands, hooks, events, and more, Nuvola gives you the tools to turn your ideas into reality.
 
-Examples can be found in the examples directory [here](Examples/Modules/).
-
 # Documentation
 
 We currently don't have a website (yet!).  
