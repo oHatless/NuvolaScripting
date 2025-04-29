@@ -7,7 +7,7 @@ With support for custom modules, commands, hooks, events, and more, Nuvola gives
 # Documentation
 
 We currently don't have a website (yet!).  
-In the meantime, you can browse all documented functions in the [AutoComplete](AutoComplete/) folder.
+In the meantime, you can browse all documented functions in the [API](API/) folder.
 
 # Features
 - Modern event system with cancellation and typed event parameters.
