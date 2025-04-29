@@ -25,7 +25,6 @@ function KeyEvent:isPressed() end
 function KeyEvent:isReleased() end
 
 ---Cancels the event so the game won't know the key was pressed.  
----Use this to block input or override behavior.  
 function KeyEvent:cancel() end
 
 ---Uncancels the event, letting the game handle it normally.  

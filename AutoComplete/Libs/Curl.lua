@@ -81,7 +81,7 @@ function curl:getResponse() end
 function curl:getStatusCode() end
 
 ---Get the Content-Type of the response, if available.  
----@return string?  
+---@return String?  
 ---@nodiscard  
 function curl:getContentType() end
 
@@ -91,7 +91,7 @@ function curl:getContentType() end
 function curl:getContentLength() end
 
 ---Get a human-readable error message after a failed perform.  
----@return string?  
+---@return String?  
 ---@nodiscard  
 function curl:getError() end
 
@@ -133,10 +133,10 @@ function curl:setTimeout(seconds) end
 
 ---Escape (percent-encode) a URL string.  
 ---@param url String|string  
----@return string  
+---@return String  
 function curl.escape(url) end
 
 ---Unescape (decode) a percent-encoded URL string.  
 ---@param url String|string  
----@return string  
+---@return String  
 function curl.unescape(url) end

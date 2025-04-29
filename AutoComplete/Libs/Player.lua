@@ -1,6 +1,5 @@
 ---@meta
 
----Getter functions will return nil if there is no player (e.g, not being in a world).  
 player = {}
 
 ---Returns the player's position in floating point coordinates.  

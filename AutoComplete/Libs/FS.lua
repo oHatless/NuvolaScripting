@@ -254,3 +254,8 @@ function fs.getRoamingState() end
 ---@return Path  
 ---@nodiscard  
 function fs.getTempState() end
+
+---Returns the Nuvola directory inside RoamingState.  
+---@return Path  
+---@nodiscard  
+function fs.getNuvolaPath() end

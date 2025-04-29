@@ -1,5 +1,6 @@
 ---@meta
 
+---@class event
 event = {}
 
 ---Called when the respective event is triggered in-game.  
@@ -7,19 +8,27 @@ event = {}
 ---@overload fun(name: '"LevelTick"', callback: fun(e: LevelTick))
 ---@overload fun(name: '"ActorTick"', callback: fun(e: ActorTick))
 ---@overload fun(name: '"PlayerAttack"', callback: fun(e: PlayerAttack))
+---@overload fun(name: '"ChatReceive"', callback: fun(e: ChatReceiveEvent))
+---@overload fun(name: '"ChatSend"', callback: fun(e: ChatSendEvent))
+---@overload fun(name: '"Render"', callback: fun(e: RenderEvent))
+---@overload fun(name: '"RenderPass"', callback: fun(e: RenderPassEvent))
 ---@param name String|string
 function event.on(name, callback) end
 
----Listens to an event with a callback, regardless of the module state.  
+---Listens to an event with a callback.  
 ---@overload fun(name: '"KeyInput"', callback: fun(e: KeyEvent))
 ---@overload fun(name: '"LevelTick"', callback: fun(e: LevelTick))
 ---@overload fun(name: '"ActorTick"', callback: fun(e: ActorTick))
 ---@overload fun(name: '"PlayerAttack"', callback: fun(e: PlayerAttack))
+---@overload fun(name: '"ChatReceive"', callback: fun(e: ChatReceiveEvent))
+---@overload fun(name: '"ChatSend"', callback: fun(e: ChatSendEvent))
+---@overload fun(name: '"Render"', callback: fun(e: RenderEvent))
+---@overload fun(name: '"RenderPass"', callback: fun(e: RenderPassEvent))
 ---@param name String|string
 function event.listen(name, callback) end
 
 ---Stops listening to the specified event.
----@param name '"KeyInput"'|'"LevelTick"'|'"ActorTick"'|'"PlayerAttack"'
+---@param name '"KeyInput"'|'"LevelTick"'|'"ActorTick"'|'"PlayerAttack"'|'"ChatReceive"'|'"ChatSend"'|'"Render"'|'"RenderPass"'
 function event.deafen(name) end
 
 ---Triggers a custom event manually.  
