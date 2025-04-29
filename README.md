@@ -52,15 +52,16 @@ If you want your script to run code continuously, you must call `script.loop()`.
 It runs your code repeatedly in a dedicated thread shared by all scripts, with an optional delay you specify.  
 Do not call `timer.sleep()` inside `script.loop()`, as it will sleep the entire thread and block other scripts from looping.
 
-# AutoComplete
+# Auto Completion
 
-Nuvola offers full autocomplete and IntelliSense support in Visual Studio Code, making scripting faster and easier.
+To get the best scripting experience with Nuvola, it's recommended to set up the [LuaLS](https://github.com/LuaLS/lua-language-server) tool.  
+LuaLS provides powerful features such as intelligent code completion, syntax highlighting, type checking, and error detection.
 
 ### Setup Instructions
 
-1. In Minecraft with Nuvola injected, run the following command to get the latest autocomplete:  
+1. In Minecraft with Nuvola injected, run the following command to get the latest documentation:  
    ```
-   .lua autocomplete
+   .lua docs
    ```
 
 2. Download [Visual Studio Code](https://code.visualstudio.com/).
@@ -69,5 +70,5 @@ Nuvola offers full autocomplete and IntelliSense support in Visual Studio Code, 
 
 4. Open the extension settings and add the following path to `Lua > Workspace > User Third Party`:
    ```
-   %localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\Nuvola\Scripts\AutoComplete
+   %localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\Nuvola\Scripts\API
    ```
