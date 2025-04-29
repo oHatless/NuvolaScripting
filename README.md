@@ -1,6 +1,6 @@
-# Nuvola Scripting
+# Nuvola Scripting Documentation
 
-Nuvola Scripting is a powerful API built on Lua 5.4.7, utilizing all the latest features.
+Nuvola Scripting is a powerful API built on Lua 5.4.7.
 It’s designed to be intuitive, safe, and incredibly fast, enabling you to create anything you can think of with minimal effort.
 With support for custom modules, commands, hooks, events, and more, Nuvola gives you the tools to turn your ideas into reality.
 
@@ -12,15 +12,12 @@ We currently don't have a website (yet!).
 In the meantime, you can browse all documented functions in the [AutoComplete](AutoComplete/) folder.
 
 # Features
-- [Fastest in the land](BENCHMARK.md) (Outperforms Latite, Flarial, Onix, Selaura, and Solstice in every category).
 - Modern event system with cancellation and typed event parameters.
-- Object-oriented API that lets you manipulate objects directly with method binds, no need for wrapper functions!
+- Object-oriented API that lets you directly manipulate objects.
 - Lightweight and optimized for performance.
-- Stack traced error messages and safe failover.
-- Handles edge cases. Null pointers, missing data, and invalid references won't cause crashes.
-- Over 700 documented functions and growing.
+- Over 1000+ documented functions.
+- Stack traced error messages.
 - Extensive chainability.
-- Actively maintained.
 
 # AutoComplete
 
@@ -33,7 +30,7 @@ Nuvola offers full autocomplete and IntelliSense support in Visual Studio Code, 
    .lua autocomplete
    ```
 
-2. Download [Visual Studio Code](https://code.visualstudio.com/) (if you haven’t already).
+2. Download [Visual Studio Code](https://code.visualstudio.com/).
 
 3. Install the Lua Language Server extension by Sumneko from the VS Code marketplace.
 
@@ -42,4 +39,12 @@ Nuvola offers full autocomplete and IntelliSense support in Visual Studio Code, 
    %localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\Nuvola\Scripts\AutoComplete
    ```
 
-You're all set! You'll now get smart autocomplete, function signatures and type hints as you script with Nuvola.
+# Execution
+
+Understanding how the API handles execution is essential to avoid deadlocks and random freezes.
+
+When a script is loaded by the API, it first calls `client.registerModule()` exactly once to retrieve metadata.
+After registration, all global scope code is executed immediately. Then, the script’s configuration is loaded, and lifecycle functions like `onEnable()` are called as needed.
+It’s important to note that global code is only executed once. If you want your script to run code continuously, you must explicitly use `script.loop()`.
+`script.loop()` runs your code repeatedly in a dedicated thread shared by all scripts, with an optional delay you specify.
+Do not call `timer.sleep()` inside `script.loop()`, as it will sleep the entire thread and block other scripts from looping.
