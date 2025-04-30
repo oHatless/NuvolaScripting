@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ChatReceiveEvent
-ChatReceiveEvent = {}
+local ChatReceiveEvent = {}
 
 ---@return String  
 ---@nodiscard  
