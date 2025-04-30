@@ -11,7 +11,7 @@ function json.parse(str) end
 
 ---Serializes a Lua table into a JSON string.  
 ---@param tbl table  
----@param pretty? boolean Whether to pretty-print (indent) the output  
+---@param pretty? boolean # Whether to pretty-print (indent) the output  
 ---@return String  
 ---@nodiscard  
 function json.stringify(tbl, pretty) end

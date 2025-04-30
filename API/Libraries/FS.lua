@@ -6,55 +6,6 @@ fs = {}
 ---@class Path
 local Path = {}
 
----Joins another part onto the current path.  
----@param other String|string  
----@return Path  
-function Path:join(other) end
-
----Returns the filename (e.g., "file.txt").  
----@return Path  
-function Path:filename() end
-
----Returns the file stem (e.g., "file" from "file.txt").  
----@return Path  
-function Path:stem() end
-
----Returns the file extension (e.g., ".txt").  
----@return Path  
-function Path:extension() end
-
----Returns the parent directory path.  
----@return Path  
-function Path:parentPath() end
-
----Returns the absolute path.  
----@return Path  
-function Path:absolute() end
-
----Returns the canonical (cleaned) path.  
----@return Path  
-function Path:canonical() end
-
----Converts the Path to a String.  
----@return String  
----@nodiscard  
-function Path:toString() end
-
----Returns whether this path exists.  
----@return boolean  
----@nodiscard  
-function Path:exists() end
-
----Returns whether this path is a file.  
----@return boolean  
----@nodiscard  
-function Path:isFile() end
-
----Returns whether this path is a directory.  
----@return boolean  
----@nodiscard  
-function Path:isDirectory() end
-
 ---Creates a new Path object.  
 ---@param initialPath String|string  
 ---@return Path  
@@ -259,3 +210,52 @@ function fs.getTempState() end
 ---@return Path  
 ---@nodiscard  
 function fs.getNuvolaPath() end
+
+---Joins another part onto the current path.  
+---@param other String|string  
+---@return Path  
+function Path:join(other) end
+
+---Returns the filename (e.g., "file.txt").  
+---@return Path  
+function Path:filename() end
+
+---Returns the file stem (e.g., "file" from "file.txt").  
+---@return Path  
+function Path:stem() end
+
+---Returns the file extension (e.g., ".txt").  
+---@return Path  
+function Path:extension() end
+
+---Returns the parent directory path.  
+---@return Path  
+function Path:parentPath() end
+
+---Returns the absolute path.  
+---@return Path  
+function Path:absolute() end
+
+---Returns the canonical (cleaned) path.  
+---@return Path  
+function Path:canonical() end
+
+---Converts the Path to a String.  
+---@return String  
+---@nodiscard  
+function Path:toString() end
+
+---Returns whether this path exists.  
+---@return boolean  
+---@nodiscard  
+function Path:exists() end
+
+---Returns whether this path is a file.  
+---@return boolean  
+---@nodiscard  
+function Path:isFile() end
+
+---Returns whether this path is a directory.  
+---@return boolean  
+---@nodiscard  
+function Path:isDirectory() end

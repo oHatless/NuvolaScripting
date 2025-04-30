@@ -25,5 +25,5 @@ function onEject() end
 function onUpdate() end
 
 ---Called every frame in the render thread.  
----@param dt number  
+---@param dt number # The time in seconds since the last frame.  
 function onRender(dt) end

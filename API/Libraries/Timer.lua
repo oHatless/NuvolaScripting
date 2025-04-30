@@ -4,21 +4,21 @@
 timer = {}
 
 ---Sets a function to run after a delay.  
----@param seconds number  
+---@param ms number  
 ---@param callback fun()  
 ---@return integer timerId  
-function timer.setTimeout(seconds, callback) end
+function timer.setTimeout(ms, callback) end
 
 ---Sets a function to run repeatedly at an interval.  
----@param seconds number  
+---@param ms number  
 ---@param callback fun()  
 ---@return integer timerId  
-function timer.setInterval(seconds, callback) end
+function timer.setInterval(ms, callback) end
 
 ---Clears a timeout or interval.  
 ---@param timerId integer  
 function timer.clear(timerId) end
 
----Delays the current thread by a number of seconds (cooperative sleep).  
----@param seconds number  
-function timer.sleep(seconds) end
+---Suspends the current thread by a number of milliseconds.  
+---@param ms number  
+function timer.sleep(ms) end

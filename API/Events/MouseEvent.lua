@@ -9,10 +9,14 @@ local MouseEvent = {}
 ---3 = Middle Click.  
 ---4 = Mouse Scroll.  
 ---@return integer  
+---@nodiscard  
 function MouseEvent:getButton() end
 
----Returns the button state (0 = released, 1 = pressed).  
+---Returns the button state.
+---0 = Released.  
+---1 = Pressed.  
 ---@return integer  
+---@nodiscard  
 function MouseEvent:getState() end
 
 ---Returns true if the mouse button is currently pressed.  
@@ -32,6 +36,7 @@ function MouseEvent:uncancel() end
 
 ---Returns true if the event has been cancelled.  
 ---@return boolean  
+---@nodiscard  
 function MouseEvent:isCancelled() end
 
 ---Sets whether the event is cancelled.  

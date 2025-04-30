@@ -1,9 +1,9 @@
 ---@meta
 
----@class LevelTick
-local LevelTick = {}
+---@class LevelTickEvent
+local LevelTickEvent = {}
 
 ---Gets the level.  
 ---@return Level?  
 ---@nodiscard  
-function LevelTick:getLevel() end
+function LevelTickEvent:getLevel() end

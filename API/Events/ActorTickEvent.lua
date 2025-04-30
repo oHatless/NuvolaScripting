@@ -1,9 +1,9 @@
 ---@meta
 
----@class ActorTick
-local ActorTick = {}
+---@class ActorTickEvent
+local ActorTickEvent = {}
 
 ---Gets the actor in the event.  
 ---@return Actor?  
 ---@nodiscard  
-function ActorTick:getActor() end
+function ActorTickEvent:getActor() end

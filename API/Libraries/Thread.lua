@@ -6,7 +6,7 @@ thread = {}
 ---@class Thread
 local Thread = {}
 
----Creates a new thread object (not started yet).  
+---Creates a new thread object.  
 ---@param func fun()  
 ---@return Thread  
 ---@nodiscard  
@@ -64,6 +64,6 @@ function Thread:isStopped() end
 ---@nodiscard  
 function Thread:getId() end
 
----Sets the name of the thread for debugging purposes.  
+---Sets the name of the thread.  
 ---@param name String|string  
 function Thread:setName(name) end

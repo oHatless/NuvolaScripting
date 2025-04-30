@@ -9,4 +9,5 @@ function Level:setTime(time) end
 
 ---Returns the level's unique ID.  
 ---@return String  
+---@nodiscard  
 function Level:getId() end

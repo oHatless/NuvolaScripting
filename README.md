@@ -28,7 +28,7 @@ local pos = player.getPosition()
 ```
 
 - Binds are objects that can either be created using .new(), or returned by a static function or event.  
-   Functions called on binds are much more efficient and optimized for performance.
+   Functions called on binds are more efficient due to their nature.
 
 Example:
 ```lua
