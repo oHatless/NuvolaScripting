@@ -9,25 +9,25 @@ local ModuleManager = {}
 function ModuleManager:getModules() end
 
 ---Finds a module by name.  
----@param name String|string  
+---@param name aString  
 ---@return Module?  
 ---@nodiscard  
 function ModuleManager:getModule(name) end
 
 ---Enables a module by name.  
----@param name String|string  
+---@param name aString  
 function ModuleManager:enableModule(name) end
 
 ---Disables a module by name.  
----@param name String|string  
+---@param name aString  
 function ModuleManager:disableModule(name) end
 
 ---Toggles a module by name.  
----@param name String|string  
+---@param name aString  
 function ModuleManager:toggleModule(name) end
 
 ---Returns whether a module is enabled.  
----@param name String|string  
+---@param name aString  
 ---@return boolean  
 ---@nodiscard  
 function ModuleManager:isModuleEnabled(name) end

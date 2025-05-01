@@ -65,5 +65,5 @@ function Thread:isStopped() end
 function Thread:getId() end
 
 ---Sets the name of the thread.  
----@param name String|string  
+---@param name aString  
 function Thread:setName(name) end

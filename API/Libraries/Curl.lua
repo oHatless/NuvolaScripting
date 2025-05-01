@@ -39,7 +39,7 @@ eCurlOption = {
 function curl.new() end
 
 ---Adds a header to the request.  
----@param header String|string  
+---@param header aString  
 ---@return curl  
 function curl:addHeader(header) end
 
@@ -96,28 +96,28 @@ function curl:getContentLength() end
 function curl:getError() end
 
 ---Download the response directly into a file.  
----@param filePath String|string  
+---@param filePath aString  
 ---@return curl  
 function curl:downloadToFile(filePath) end
 
 ---Upload the contents of a file.  
----@param filePath String|string  
+---@param filePath aString  
 ---@return curl  
 function curl:uploadFromFile(filePath) end
 
 ---Quick GET request shortcut.  
----@param url String|string  
+---@param url aString  
 ---@return curl  
 function curl:get(url) end
 
 ---Quick POST request shortcut.  
----@param url String|string  
+---@param url aString  
 ---@param data table|String|string  
 ---@return curl  
 function curl:post(url, data) end
 
 ---Set a Lua function to receive downloaded data chunks.  
----@param callback fun(data: String|string)  
+---@param callback fun(data: aString)  
 ---@return curl  
 function curl:setWriteCallback(callback) end
 
@@ -132,11 +132,11 @@ function curl:setProgressCallback(callback) end
 function curl:setTimeout(seconds) end
 
 ---Escape (percent-encode) a URL string.  
----@param url String|string  
+---@param url aString  
 ---@return String  
 function curl.escape(url) end
 
 ---Unescape (decode) a percent-encoded URL string.  
----@param url String|string  
+---@param url aString  
 ---@return String  
 function curl.unescape(url) end

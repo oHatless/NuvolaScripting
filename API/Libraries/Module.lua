@@ -19,7 +19,7 @@ local Module = {}
 function module.getModules() end
 
 ---Finds a module by name.  
----@param name String|string  
+---@param name aString  
 ---@return Module?  
 ---@nodiscard  
 function module.getModule(name) end

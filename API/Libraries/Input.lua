@@ -4,19 +4,19 @@
 input = {}
 
 ---Returns whether the specified key is currently pressed.  
----@param key String|string  
+---@param key aString  
 ---@return boolean  
 ---@nodiscard  
 function input.isKeyPressed(key) end
 
 ---Returns whether the specified key was just pressed this frame.  
----@param key String|string  
+---@param key aString  
 ---@return boolean  
 ---@nodiscard  
 function input.isKeyDown(key) end
 
 ---Returns whether the specified key was just released this frame.  
----@param key String|string  
+---@param key aString  
 ---@return boolean  
 ---@nodiscard  
 function input.isKeyUp(key) end
@@ -50,12 +50,12 @@ function input.blockInput(block) end
 function input.isInputBlocked() end
 
 ---Blocks a specific key from reaching the game.  
----@param key String|string  
+---@param key aString  
 ---@param block boolean  
 function input.blockKey(key, block) end
 
 ---Returns whether a specific key is blocked.  
----@param key String|string  
+---@param key aString  
 ---@return boolean  
 ---@nodiscard  
 function input.isKeyBlocked(key) end
@@ -97,3 +97,11 @@ function input.getPressedKeys() end
 ---@return integer[]  
 ---@nodiscard  
 function input.getPressedMouseButtons() end
+
+---Simulates a key press.  
+---@param key String|string|integer  
+function game.pressKey(key) end
+
+---Simulates a mouse button press.  
+---@param button integer  
+function game.pressMouse(button) end

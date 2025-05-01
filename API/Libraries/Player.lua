@@ -168,13 +168,13 @@ function player.moveBackward() end
 function player.setVelocity(velocity) end
 
 ---Makes the player say something in chat.  
----@param message String|string  
+---@param message aString  
 function player.sendChatMessage(message) end
 
 ---Makes the player execute a Minecraft command (exclude '/').  
----@param command String|string  
+---@param command aString  
 function player.executeGameCommand(command) end
 
 ---Makes the player execute a Nuvola command (exclude prefix).  
----@param command String|string  
+---@param command aString  
 function player.executeClientCommand(command) end

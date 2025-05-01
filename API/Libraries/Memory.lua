@@ -41,7 +41,7 @@ function memory.memSet(ptr, val, num) end
 function memory.copy(dest, src, size) end
 
 ---Returns the base address of the specified module.
----@param moduleName? String|string  
+---@param moduleName? aString  
 ---@return Pointer  
 ---@nodiscard  
 function memory.getBaseAddress(moduleName) end
@@ -179,7 +179,7 @@ function memory.writeVec3(address, value) end
 
 ---Writes a string to memory.  
 ---@param address Pointer  
----@param value String|string  
+---@param value aString  
 function memory.writeString(address, value) end
 
 ---Writes multiple bytes from an array to memory.  
@@ -189,7 +189,7 @@ function memory.writeBytes(address, bytes) end
 
 ---Reads a Lua table from memory according to a format.  
 ---@param address Pointer  
----@param format String|string e.g., "iif" means int, int, float  
+---@param format aString e.g., "iif" means int, int, float  
 ---@return table  
 ---@nodiscard  
 function memory.readTable(address, format) end
@@ -197,7 +197,7 @@ function memory.readTable(address, format) end
 ---Writes a Lua table to memory according to a format.  
 ---@param address Pointer  
 ---@param tbl table  
----@param format String|string  
+---@param format aString  
 function memory.writeTable(address, tbl, format) end
 
 ---Performs a RIP-relative address calculation.  
@@ -207,8 +207,8 @@ function memory.writeTable(address, tbl, format) end
 function memory.rip(address) end
 
 ---Scans for a byte pattern in a module's memory.  
----@param pattern String|string  
----@param moduleName? String|string  
+---@param pattern aString  
+---@param moduleName? aString  
 ---@return Pointer  
 ---@nodiscard  
 function memory.scan(pattern, moduleName) end

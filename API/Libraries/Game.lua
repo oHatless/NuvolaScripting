@@ -58,7 +58,7 @@ function game.setCursorPos(pos) end
 function game.setCursorPos(x, y) end
 
 ---Plays a Minecraft sound.  
----@param name String|string  
+---@param name aString  
 ---@param volume number?  
 ---@param pitch number?
 function game.playSound(name, volume, pitch) end
@@ -70,7 +70,7 @@ function game.takeScreenshot() end
 function game.copyScreenshot() end
 
 ---Disconnects you from the game/server.  
----@param reason String|string?  
+---@param reason aString?  
 function game.disconnect(reason) end
 
 ---Returns the clipboard content.  
@@ -79,16 +79,8 @@ function game.disconnect(reason) end
 function game.getClipboard() end
 
 ---Sets the clipboard content.  
----@param content String|string  
+---@param content aString  
 function game.setClipboard(content) end
-
----Simulates a key press.  
----@param key String|string|integer  
-function game.pressKey(key) end
-
----Simulates a mouse button press.  
----@param button integer  
-function game.pressMouse(button) end
 
 ---Returns Minecrafts version as a String.  
 ---@return String  
