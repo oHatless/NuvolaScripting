@@ -29,6 +29,7 @@ eEvent = {
 ---@overload fun(name: 8, callback: fun(e: RenderPassEvent))  
 ---@overload fun(name: 9, callback: fun(e: PlayerAttackEvent))  
 ---@param name eEvent  
+---@async  
 function event.on(name, callback) end
 
 ---Listens to an event with a callback.  
@@ -43,6 +44,7 @@ function event.on(name, callback) end
 ---@overload fun(name: 8, callback: fun(e: RenderPassEvent))  
 ---@overload fun(name: 9, callback: fun(e: PlayerAttackEvent))  
 ---@param name eEvent  
+---@async  
 function event.listen(name, callback) end
 
 ---Stops listening to the specified event.  

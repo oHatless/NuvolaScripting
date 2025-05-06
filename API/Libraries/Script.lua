@@ -15,7 +15,6 @@ function script.yield(ms) end
 
 ---Resumes a coroutine that was previously paused using `script.yield()`.  
 ---This allows you to continue execution from the point where the coroutine was paused.  
----@return void
 function script.resume() end
 
 ---Queues a request to reload all scripts.  
