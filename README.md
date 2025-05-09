@@ -17,17 +17,6 @@ In the meantime, you can browse all documented functions in the [API](API/) fold
 - Stack traced error messages.
 - Extensive chainability.
 
-# Execution
-
-Understanding how the API handles execution is essential to avoid deadlocks and random freezes.
-
-When a script is loaded by the API, it calls `client.registerModule()` to retrieve metadata.  
-After registration, all global scope code is executed. Then, lifecycle functions like `onEnable()` are called as needed.  
-
-It’s important to note that global code is only executed once.  
-If you want your script to run code continuously, you must call `script.loop()`.  
-It runs your code repeatedly in a dedicated thread shared by all scripts, with an optional delay you specify.  
-
 # Auto Completion
 
 To get the best scripting experience with Nuvola, it's recommended to set up the [LuaLS](https://github.com/LuaLS/lua-language-server) tool.  
